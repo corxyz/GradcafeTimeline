@@ -36,6 +36,7 @@ $ python main.py -q <query_string>
 The query string would be the admission-related search you would otherwise enter to search on [Results](https://www.thegradcafe.com/survey/) page of Gradcafe. **Please make sure to wrap your search string in quotes if it contains any whitespace.**
 
 For example, if you would like to see the admission timeline for "computer science", use
+
 ``
 $ python main.py "computer science"
 ``
@@ -45,6 +46,7 @@ This would give you a graph generated from **all** decision results (**Interview
 ![enter image description here](https://lh3.googleusercontent.com/pgq7c6zNCbYCwylzoIztFVRqihAfHPIgpUsdLj6nlTc8LFLqGchMKjNoBwQy66PfdQJOGT_QnD3w "example_timeline_cs")
 
 If you would like to see the admission timeline for "(yale|"johns hopkins") econ*", use
+
 ``
 $ python main.py "(yale|\"johns hopkins\") econ*"
 ``
@@ -64,6 +66,7 @@ The following optional arguments allow you to further narrow down admission resu
 | decisions | `--decisions`, `-d` | type of academic decision **(default: None)**| 
 
 For example, to generate a timeline using admission results associated with "math" starting from 2015 till now, looking at only Accepted and Rejected results dated between January and March, use the command
+
 ``
 $ python main.pyd "math" -y 2015 -s 1 -e 3 -d "Accepted Rejected"
 ``
