@@ -69,6 +69,7 @@ $ python main.pyd "math" -y 2015 -s 1 -e 3 -d "Accepted Rejected"
 ``
 
 The plot would look like the following:
+
 ![enter image description here](https://lh3.googleusercontent.com/cdNL6yA6byxkD4_qt4mbLSqAzSA15pwsst_c7Ae2Lguu-gHljqN49SIFFOxXW4nXt9j3evkBLgV_ "example-math-2015-jan-march-ar")
  
 ## Contributing
