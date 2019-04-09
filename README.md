@@ -85,7 +85,9 @@ Corey Zhou aka amecolli
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+MIT License
+
+Copyright (c) 2019 Corey Zhou
 
 ## Acknowledgments
 
