@@ -2,7 +2,6 @@
 
 import matplotlib
 import matplotlib.pyplot as plt
-import numpy as np
 import collections, calendar
 from datetime import date, timedelta, datetime
 

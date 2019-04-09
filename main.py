@@ -24,19 +24,19 @@ def parseArgs(argDict, args):
   if args.query: argDict['query'] = args.query.replace(" ","+")
   else: raise Exception("Query string must not be empty!")
   if args.minYear: argDict['minYear'] = int(args.minYear)
-  if args.start: argDict['startMonth'] = int(args.start)
-  if args.end: argDict['endMonth'] = int(args.end)
+  if args.startMonth: argDict['startMonth'] = int(args.startMonth)
+  if args.endMonth: argDict['endMonth'] = int(args.endMonth)
   if args.decisions: argDict['decisions'] = args.decisions.split()
 
 def main():
   argDict = initArgs()                      # intialize all arguments
 
   parser = argparse.ArgumentParser()
-  parser.add_argument("-q", "--query", help="admission-related search string")
-  parser.add_argument("-y", "--minYear", help="earliest year of results")
-  parser.add_argument("-s", "--start", help="start month of timeline (academic year)")
-  parser.add_argument("-e", "--end", help="end month of timeline (academic year)")
-  parser.add_argument("-d", "--decisions", help="type of admission decision")
+  parser.add_argument("query", help="admission-related search string")
+  parser.add_argument("-y", "--min_year", help="earliest year of results", dest="minYear")
+  parser.add_argument("-s", "--start_month", help="start month of timeline (academic year)", dest="startMonth")
+  parser.add_argument("-e", "--end_month", help="end month of timeline (academic year)", dest="endMonth")
+  parser.add_argument("-d", "--decisions", help="type of admission decision", dest="decisions")
   args = parser.parse_args()
 
   parseArgs(argDict, args)                  # parse arguments obtained from command line input
