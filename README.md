@@ -51,7 +51,7 @@ If you would like to see the admission timeline for "(yale|"johns hopkins") econ
 $ python main.py "(yale|\"johns hopkins\") econ*"
 ``
 
-*Note the backslash("\") in front of quotes as part of the query string.*
+*Note the backslash("\") in front of quotes as part of the query string. It is required as an escape character for correct python string parsing.*
 
 ### Additional Options (Optional)
 
