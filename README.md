@@ -1,6 +1,7 @@
+
 # Gradcafe Timeline
 
-Inspired by [this](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/) reddit post on admission timelines for different universities, I decided to go ahead and make a **command line tool for plotting decision timeline based on Gradcafe data**.
+Inspired by [this](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/) reddit post on admission timelines for different universities, I decided to go ahead and make a **command line tool for plotting admission decision timeline based on Gradcafe data**.
 
 - [Features](#features)
 - [Getting Started](#getting-started)
@@ -23,17 +24,20 @@ Please make sure you have all required software/packages installed:
 ### Prerequisites
 
 - [Python 2.7](https://www.python.org/downloads/)
-- [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/)
-- [Matplotlib](https://matplotlib.org/users/installing.html)
+- [BeautifulSoup4](https://pypi.org/project/beautifulsoup4/)  `pip install beautifulsoup4`
+- [Matplotlib](https://matplotlib.org/users/installing.html)  `python -m pip install -U matplotlib`
+
+**This CLI tool is best for people who are familiar with basic regex (regular expression) and Gradcafe already.** Please take a look at [Graduate School Admission Results](https://www.thegradcafe.com/survey/) on Gradcafe to see some examples of admission decisions and search queries using regex. If you are unfamiliar with regex, [here](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285) is some basic tutorial to get you started.
 
 ## Example Usage
 
 After you have installed all dependencies, navigate to the root directory and start with the following simple command in terminal:
+
 ``
-$ python main.py -q <query_string>
+$ python main.py <query_string>
 ``
 
-The query string would be the admission-related search you would otherwise enter to search on [Results](https://www.thegradcafe.com/survey/) page of Gradcafe. **Please make sure to wrap your search string in quotes if it contains any whitespace.**
+The query string would be the admission-related search in regex you would otherwise enter to search on the [Results](https://www.thegradcafe.com/survey/) page of Gradcafe. **Please make sure to wrap your search string in quotes if it contains any whitespace.**
 
 For example, if you would like to see the admission timeline for "computer science", use
 
@@ -45,15 +49,17 @@ This would give you a graph generated from **all** decision results (**Interview
 
 ![enter image description here](https://lh3.googleusercontent.com/pgq7c6zNCbYCwylzoIztFVRqihAfHPIgpUsdLj6nlTc8LFLqGchMKjNoBwQy66PfdQJOGT_QnD3w "example_timeline_cs")
 
-If you would like to see the admission timeline for "(yale|"johns hopkins") econ*", use
+**_A generic query like "computer science" is likely gonna take a while (i.e. a couple of minutes) to produce any result due to sheer amount of data. Please be patient, or use more specific queries and/or [optional timeline variables](#optional-timeline-variables) if you would like faster response._**
+
+As another example, if you would like to see the admission timeline for "(yale|"johns hopkins") econ*", use
 
 ``
 $ python main.py "(yale|\"johns hopkins\") econ*"
 ``
 
-*Note the backslash("\") in front of quotes as part of the query string. It is required as an escape character for correct python string parsing.*
+*Note the backslash("\\") in front of quotes as part of the query string. It is required as an escape character for correct python string parsing.*
 
-### Additional Options (Optional)
+### Optional Timeline Variables
 
 The following optional arguments allow you to further narrow down admission results by specifying the admission cycles, admission periods, and decision types to be included in your timeline.
 
@@ -91,6 +97,7 @@ Copyright (c) 2019 Corey Zhou
 
 ## Acknowledgments
 
-* Inspired by [u/un_deaddy](https://www.reddit.com/user/un_deaddy)'s reddit [post](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/) back in 2017 inspired by a [blog entry](http://debarghyadas.com/writes/the-grad-school-statistics-we-never-had/) by Debarghya Das back in 2015
+* Inspired by [u/un_deaddy](https://www.reddit.com/user/un_deaddy)'s reddit [post](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/) back in 2017, which was inspired by a [blog entry](http://debarghyadas.com/writes/the-grad-school-statistics-we-never-had/) by Debarghya Das back in 2015
 * Adapted from [GradcafeWatcher](https://github.com/utkarshsimha/GradcafeWatcher)
-* Unconditional mental support I received during the 2019 grad school admission cycle
+* Tested by MLSquad
+* Supported mentally by family, faculty, and friends during the 2019 grad admission cycle
