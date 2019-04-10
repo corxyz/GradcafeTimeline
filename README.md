@@ -91,6 +91,6 @@ Copyright (c) 2019 Corey Zhou
 
 ## Acknowledgments
 
-* Inspired by [u/un_deaddy](https://www.reddit.com/user/un_deaddy)'s reddit [post](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/)
+* Inspired by [u/un_deaddy](https://www.reddit.com/user/un_deaddy)'s reddit [post](https://www.reddit.com/r/gradadmissions/comments/7srxxy/decision_timelines_for_particular_universities/) back in 2017 inspired by a [blog entry](http://debarghyadas.com/writes/the-grad-school-statistics-we-never-had/) by Debarghya Das back in 2015
 * Adapted from [GradcafeWatcher](https://github.com/utkarshsimha/GradcafeWatcher)
 * Unconditional mental support I received during the 2019 grad school admission cycle
