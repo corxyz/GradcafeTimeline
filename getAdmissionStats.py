@@ -108,7 +108,10 @@ def getAdmissionStats(url, minYear):
   # parse fetched data
   parsedData = BeautifulSoup(rawData, "html.parser")
   # get number of pages in total
-  numPages = int(parsedData.find(attrs={'class':'admission-search pagination'}).text.split()[4])
+  try:
+    numPages = int(parsedData.find(attrs={'class':'admission-search pagination'}).text.split()[4])
+  except:
+    raise Exception("No admission results found. Please check your spelling and make a different query.\n")
   # query each page 
   # (note this means the first page is queried twice; the first query is only to get # of pages - kinda inefficient, but more reusable code)
   for page in range(1,numPages+1):
