@@ -74,7 +74,7 @@ The following optional arguments allow you to further narrow down admission resu
 For example, to generate a timeline using admission results associated with "math" starting from 2015 till now, looking at only Accepted and Rejected results dated between January and March, use the command
 
 ``
-$ python main.pyd "math" -y 2015 -s 1 -e 3 -d "Accepted Rejected"
+$ python main.py "math" -y 2015 -s 1 -e 3 -d "Accepted Rejected"
 ``
 
 The plot would look like the following:
