@@ -93,7 +93,7 @@ Corey Zhou aka amecolli
 
 MIT License
 
-Copyright (c) 2019 Corey Zhou
+Copyright (c) 2020 Corey Zhou
 
 ## Acknowledgments
 
